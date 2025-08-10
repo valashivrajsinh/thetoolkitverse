@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Toolkitverse | AI & Software Tool Directory</title>
+    <meta name="description" content="The ultimate AI-powered directory to discover, analyze, and compare software tools. Find alternatives, get in-depth analysis, and stay ahead with tech news." />
+    <meta name="keywords" content="AI tools, software comparison, tech news, productivity tools, toolkit, analysis, Figma, Notion, Slack, developer tools" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Toolkitverse | AI & Software Tool Directory" />
+    <meta property="og:description" content="The ultimate AI-powered directory to discover, analyze, and compare software tools. Find alternatives, get in-depth analysis, and stay ahead with tech news." />
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg%20width='1200'%20height='630'%20viewBox='0%200%201200%20630'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20width='1200'%20height='630'%20fill='%230D0D10'/%3E%3Cpath%20d='M600%20215c102.21,0%20185,82.79%20185,185s-82.79,185%20-185,185%20-185,-82.79%20-185,-185S497.79,215%20600,215z'%20stroke='url(%23g)'%20stroke-width='20'/%3E%3Cpath%20d='M505%20320h190'%20stroke='white'%20stroke-width='20'%20stroke-linecap='round'/%3E%3Cpath%20d='M600%20320v160'%20stroke='white'%20stroke-width='20'%20stroke-linecap='round'/%3E%3Cdefs%3E%3ClinerGradient%20id='g'%3E%3Cstop%20stop-color='%23a855f7'/%3E%3Cstop%20offset='1'%20stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Toolkitverse | AI & Software Tool Directory" />
+    <meta property="twitter:description" content="The ultimate AI-powered directory to discover, analyze, and compare software tools. Find alternatives, get in-depth analysis, and stay ahead with tech news." />
+    <meta property="twitter:image" content="data:image/svg+xml,%3Csvg%20width='1200'%20height='630'%20viewBox='0%200%201200%20630'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20width='1200'%20height='630'%20fill='%230D0D10'/%3E%3Cpath%20d='M600%20215c102.21,0%20185,82.79%20185,185s-82.79,185%20-185,185%20-185,-82.79%20-185,-185S497.79,215%20600,215z'%20stroke='url(%23g)'%20stroke-width='20'/%3E%3Cpath%20d='M505%20320h190'%20stroke='white'%20stroke-width='20'%20stroke-linecap='round'/%3E%3Cpath%20d='M600%20320v160'%20stroke='white'%20stroke-width='20'%20stroke-linecap='round'/%3E%3Cdefs%3E%3ClinerGradient%20id='g'%3E%3Cstop%20stop-color='%23a855f7'/%3E%3Cstop%20offset='1'%20stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #a855f7, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .aurora-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -10;
+        overflow: hidden;
+      }
+      .aurora-background::before,
+      .aurora-background::after {
+        content: '';
+        position: absolute;
+        width: 1000px;
+        height: 1000px;
+        border-radius: 50%;
+        opacity: 0.15;
+        filter: blur(100px);
+        will-change: transform;
+        animation: aurora-animation 20s linear infinite alternate;
+      }
+      .aurora-background::before {
+        background-color: #7c3aed; /* purple */
+        top: -40%;
+        left: -20%;
+      }
+      .aurora-background::after {
+        background-color: #4f46e5; /* indigo */
+        bottom: -40%;
+        right: -20%;
+        animation-delay: -10s;
+      }
+      @keyframes aurora-animation {
+        0% { transform: translateX(0%) translateY(0%) rotate(0deg); }
+        100% { transform: translateX(20%) translateY(15%) rotate(20deg); }
+      }
+       /* For Webkit-based browsers (Chrome, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1e293b; /* slate-800 */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #4f46e5; /* indigo-600 */
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6366f1; /* indigo-500 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.8.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.13.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#0D0D10] text-slate-300">
+    <div class="aurora-background"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
